@@ -18,11 +18,13 @@ from backdoor_update import BackdoorUpdate
 from models.models import cifarCNN, CNNMnist, get_model
 from utils import get_dataset, exp_details, get_weight_difference, clip_grad
 
+# model weights total calculation for debugging
 def cal(dict):
     total_sum = 0
     for param_name, param in dict.items():
         total_sum += param.sum().item()
     return total_sum
+
 if __name__ == '__main__':
     start_time = time.time()
 

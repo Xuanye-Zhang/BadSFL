@@ -16,6 +16,9 @@ Install all dependencies
 pip install -r requirements.txt
 ```
 
+To run the code, can use existing half-trained model (save in *./saved_models/* folder) or train a new new model (select resume=1/0)
+
+
 ---
 
 

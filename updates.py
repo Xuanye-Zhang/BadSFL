@@ -30,6 +30,7 @@ class DatasetSplit(Dataset):
         image, label = self.dataset[self.idxs[item]]
         return torch.tensor(image), torch.tensor(label)
 
+# Scaffold method
 class ScaffoldUpdate(object):
     def __init__(self, args, dataset, idxs, logger):
         self.args = args

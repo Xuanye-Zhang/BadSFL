@@ -16,7 +16,7 @@ def cal(dict):
         total_sum += param.sum().item()
     return total_sum
 
-
+# attack method
 class Attacker(object):
     def __init__(self, train_dataset, test_dataset):
         self.train_dataset = train_dataset
@@ -267,7 +267,8 @@ class Attacker(object):
         #     self.poisoned_data_for_train = 
         #     self.test_data_poison = self.poison_test_dataset_label_5()
 
-        
+
+# compromise client update object
 class BackdoorUpdate(object):
     def __init__(self, args, device, train_dataset, test_dataset=None):
         self.args = args
@@ -387,6 +388,7 @@ class BackdoorUpdate(object):
 
         return model.state_dict(), sum(epoch_loss) / len(epoch_loss), control_delta, local_delta, self.control_local_w, time.time()- start_time
 
+    # BadSFL
     def update_weights_deltac(self, model, global_round, control_global):
 
         # Set mode to train model
@@ -565,7 +567,7 @@ class BackdoorUpdate(object):
         return total_l, acc, correct, num_data
 
 
-
+    # neurotoxin
     def update_weights_neuron(self, model, global_round, control_global):
 
         # Set mode to train model

@@ -1,13 +1,10 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 import argparse
 
 
 def args_parser():
     parser = argparse.ArgumentParser()
 
-    # federated arguments (Notation for the arguments followed from paper)
+    # federated arguments
     parser.add_argument('--epochs', type=int, default=10,
                         help="number of rounds of training")
     parser.add_argument('--num_users', type=int, default=100,
@@ -26,6 +23,7 @@ def args_parser():
     parser.add_argument('--resume', type=int, default=0,
                         help='resume or not')
     
+    # BadSFL arguments
     parser.add_argument('--BadSFL', type=int, default=0,
                         help='badScffold or not')
     
